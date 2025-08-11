@@ -1,0 +1,1 @@
+export async function GET(){const b=`User-agent: *\nAllow: /\nSitemap: https://ejenc.example.com/sitemap.xml`;return new Response(b,{headers:{'content-type':'text/plain'}})}

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --radius: 12px; }
+body { @apply text-gray-800; }
+.container { @apply mx-auto px-4; }
+.section { @apply py-16 md:py-24; }
+.card { @apply rounded-xl border border-gray-200 bg-white shadow-sm; }
+.badge { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm bg-brand-light text-brand; }
+.btn { @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-medium border border-transparent; }
+.btn-primary { @apply btn bg-brand text-white hover:bg-brand-dark; }
+.btn-outline { @apply btn bg-white border-gray-300 hover:bg-gray-50; }

@@ -1,0 +1,1 @@
+export default async function sitemap(){return[{url:'https://ejenc.example.com/',lastModified:new Date()},{url:'https://ejenc.example.com/projects',lastModified:new Date()},{url:'https://ejenc.example.com/contact',lastModified:new Date()}] }
