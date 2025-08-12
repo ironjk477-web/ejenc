@@ -1,26 +1,25 @@
+
 import Link from "next/link";
 
-export default function Hero() {
+export default function Hero(){
   return (
-    <section className="section bg-gradient-to-b from-brand-light/50 to-white">
-      <div className="container grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <div className="badge">레인버드 공식 골프 솔루션</div>
-          <h1 className="mt-4 text-3xl md:text-5xl font-bold leading-tight">
-            골프장 자동관수, <span className="text-brand">설계부터 유지보수</span>까지 원스톱
+    <section className="relative h-[80vh] min-h-[520px] w-full overflow-hidden rounded-b-[24px]">
+      <img src="/projects/hero1.jpg" className="absolute inset-0 w-full h-full object-cover" alt="현장 전경"/>
+      <div className="absolute inset-0 bg-black/40" />
+      <div className="relative z-10 h-full flex items-center">
+        <div className="mx-auto max-w-6xl px-4 text-white">
+          <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+            건설·설비 토탈 솔루션<br/><span className="text-brand-light">EJENC</span>가 시공합니다.
           </h1>
-          <p className="mt-4 text-gray-700">
-            신규 18홀 공사 · 리뉴얼 · 전자밸브/디코더 교체 · 중앙제어 업그레이드(CirrusPRO).
+          <p className="mt-5 max-w-2xl text-white/85">
+            골프장 자동관수 · 전기·배관 · 상·하수도 · 수처리. 설계부터 리뉴얼·유지보수까지 한 번에.
           </p>
-          <div className="mt-6 flex gap-3">
-            <Link href="/contact" className="btn-primary">프로젝트 상담</Link>
-            <a href="#projects" className="btn-outline">시공 사례 보기</a>
+          <div className="mt-8 flex gap-3">
+            <Link href="/projects" className="px-5 py-2.5 rounded-md bg-white text-gray-900">시공 사례 보기</Link>
+            <Link href="/contact" className="px-5 py-2.5 rounded-md bg-brand text-white">문의하기</Link>
           </div>
-        </div>
-        <div className="card p-4">
-          <img src="/hero.jpg" alt="EJENC Hero" className="w-full rounded-lg" />
         </div>
       </div>
     </section>
-  );
+  )
 }

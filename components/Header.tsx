@@ -1,37 +1,20 @@
-"use client";
-import Link from "next/link";
-import { NAV } from "@/lib/data";
-import { useState } from "react";
-import clsx from "clsx";
 
-export default function Header() {
-  const [open, setOpen] = useState(false);
+import Link from "next/link";
+
+export default function Header(){
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-100">
-      <div className="container flex items-center justify-between h-16">
-        <Link href="/" className="font-semibold text-lg">
-          <span className="text-brand">EJENC</span> · 레인버드
+    <header className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur border-b">
+      <div className="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-2">
+          <img src="/logo/ejenc-logo.svg" alt="EJENC" className="h-7" />
         </Link>
-        <nav className="hidden md:flex items-center gap-6">
-          {NAV.map((n) => (
-            <a key={n.href} href={n.href} className="text-gray-700 hover:text-brand">
-              {n.label}
-            </a>
-          ))}
-          <Link href="/contact" className="btn-primary">문의하기</Link>
+        <nav className="flex items-center gap-5 text-sm">
+          <Link href="/#services" className="hover:text-brand">서비스</Link>
+          <Link href="/projects" className="hover:text-brand">시공사례</Link>
+          <Link href="/works" className="hover:text-brand">주요 실적</Link>
+          <Link href="/contact" className="px-3 py-1.5 rounded-md bg-brand text-white">문의하기</Link>
         </nav>
-        <button onClick={()=>setOpen(!open)} className="md:hidden p-2 rounded-lg border border-gray-200">
-          <span className="sr-only">메뉴</span>☰
-        </button>
-      </div>
-      <div className={clsx("md:hidden border-t border-gray-100", open ? "block" : "hidden")}>
-        <div className="container py-3 flex flex-col gap-3">
-          {NAV.map((n) => (
-            <a key={n.href} href={n.href} className="text-gray-700">{n.label}</a>
-          ))}
-          <Link href="/contact" className="btn-primary w-full text-center">문의하기</Link>
-        </div>
       </div>
     </header>
-  );
+  )
 }
