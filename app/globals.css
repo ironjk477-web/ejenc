@@ -3,14 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { --radius: 10px; }
-
-/* Pretendard via CDN */
+/* Pretendard */
 @font-face {
   font-family: 'Pretendard Variable';
   src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.woff2') format('woff2-variations');
   font-weight: 1 999;
-  font-display: swap;
   font-style: normal;
+  font-display: swap;
 }
 html { font-family: 'Pretendard Variable', system-ui, -apple-system, Segoe UI, Roboto, 'Noto Sans KR', sans-serif; }
+:root { --radius: 12px; }
+body { @apply bg-gray-50 text-gray-900; }
+.container { @apply mx-auto max-w-6xl px-4; }
+.card { @apply rounded-2xl border bg-white p-6; }
+.btn { @apply inline-flex items-center justify-center rounded-lg px-5 py-2.5; }
+.btn-primary { @apply btn bg-brand text-white; }
+.btn-outline { @apply btn border border-gray-300 bg-white; }

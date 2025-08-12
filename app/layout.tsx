@@ -4,14 +4,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "EJENC | 골프장·관수·전기·배관 시공 전문",
-  description: "설계부터 시공·리뉴얼·유지보수까지 토탈 솔루션"
-}
+  title: "EJENC | RAIN BIRD 한국 공식 독점 대리점",
+  description: "국내 유일, RAIN BIRD 골프장 자동관수 시스템 공급 및 시공 전문"
+};
 
 export default function RootLayout({children}:{children:React.ReactNode}){
   return (
     <html lang="ko">
-      <body className="bg-gray-50 text-gray-900">
+      <body>
         <Header />
         <main className="pt-20">{children}</main>
         <Footer />

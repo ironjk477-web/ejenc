@@ -3,7 +3,7 @@ import { WORKS } from "@/lib/data";
 
 export default function WorksPage(){
   return (
-    <div className="mx-auto max-w-6xl px-4">
+    <div className="container">
       <h1 className="text-2xl font-semibold mt-6">주요 공사 실적</h1>
       <p className="text-gray-600 mt-2">연도별 대표 실적을 요약했습니다. 자세한 리스트는 요청 시 PDF로 제공해 드립니다.</p>
       <div className="mt-6 overflow-hidden rounded-xl border bg-white">
